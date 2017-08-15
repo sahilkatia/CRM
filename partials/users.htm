@@ -1,0 +1,55 @@
+
+<div class="container wrapper" ng-controller="UsersController">
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<div class="alert alert-default navbar-brand search-box">
+				<button class="btn btn-success" ng-show="show_form" ng-click="formToggle()">Add User <span class="fa fa-plus" aria-hidden="true"></span></button>
+			</div>
+			<div class="alert alert-default input-group search-box">
+				<span class="input-group-btn">
+					<input type="text" class="form-control" placeholder="Search Users..." ng-model="search_query">
+				</span>
+			</div>
+		</div>
+	</nav>
+	<div class="col-md-9 col-md-offset-2">
+
+		<!-- Include form template which is used to insert data into database -->
+		<div ng-include src="'partials/create_user.htm'"></div>
+
+		<!-- Include form template which is used to edit and update data into database -->
+		<div ng-include src="'partials/edit_user.htm'"></div>
+	</div>
+	<div class="clearfix"></div>
+
+<!-- Table to show employee detalis -->
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<tr>
+	  			<th>Emp. ID</th>
+	  			<th>Name</th>
+		  		<th>EmailID</th>
+		  		<th>Dept.</th>
+		  		<th>Course Assigned</th>
+		  		<th>Traget</th>
+		  		<th>Edit</th>
+		  		<th>Delete</th>
+	  		</tr>
+			<tr ng-repeat="users in userLists| filter:search_query">
+				<td>{{users.id}}</td>
+  				<td>{{users.username}}</td>
+  				<td>{{users.emailId}}</td>
+  				<td>{{users.role}}</td>
+  				<td>{{users.coursesassigned}}</td>
+  				<td>{{users.target}}</td>
+				<td>
+				<button class="btn btn-warning" ng-click="editUser(users)" title="Edit"><span class="fa fa-edit"></span></button>
+				</td>
+				<td>
+				<button class="btn btn-danger" ng-confirm-click="Would you like to Delete the User?" confirmed-click="deleteUser(users)" title="Delete"><span class="fa fa-trash"></span></button>
+				</td>
+				
+			</tr>
+		</table>
+	</div>
+</div>

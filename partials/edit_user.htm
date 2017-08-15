@@ -1,0 +1,36 @@
+<div ng-controller="UsersController">
+	<div class="col-md-12">
+		<div class="row">
+			<form class="form-horizontal alert alert-warning" id="editForm" ng-submit="updateUser(currentUser)" hidden>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" class="form-control input-sm" name="name" ng-model="currentUser.name" id="name" value="{{currentUser.username}}">
+					</div>
+					<div class="form-group">
+						<label for="email">EmailID</label>
+						<input type="text" name="email" class="form-control input-sm" ng-model="currentUser.email" id="email" value="{{currentUser.emailId}}" >
+					</div>
+					
+					<div class="form-group">
+						<label for="course">Course Assigned</label>
+						<input type="text" name="role" class="form-control input-sm" ng-model="currentUser.role" id="role" value="{{currentUser.role}}">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="role">Role</label>
+						<input type="text" name="role" class="form-control input-sm" ng-model="currentUser.role" id="role" value="{{currentUser.role}}">
+					</div>
+					<div class="form-group">
+						<label for="target">Target</label>
+						<input type="text" name="target" id="target" class="form-control input-sm" ng-model="currentUser.target" value="{{currentUser.target}}">
+					</div>
+				</div>
+				<div class="form-group" align="right">
+					<button class="btn btn-warning" ng-disabled="empList.$invalid" ng-click="updateMsg(currentUser.id)">Update</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,108 @@
+.container-fluid {
+    width: 100%;
+    height: 100vh;
+    background-color: #313b3d;
+}
+.container-fluidadmin{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#login-form {
+    width: 360px;
+    margin: 120px auto 0;
+    padding: 60px;
+    background: rgba(0,0,0,.2);
+    border-radius: 4px;
+}
+#login-form input[type=text], #login-form input[type=password] {
+    background: rgba(0,0,0,.2);
+    border: 1px solid rgba(255,255,255,.2);
+    padding: 6px;
+    border-radius: 2px;
+    margin: 4px 0 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #FFF;
+}
+#login-form label {
+    font-size: 11px;
+    width: 100%;
+    color: #FFF;
+    text-transform: uppercase;
+}
+#login-form .login_logo {
+    max-width: 240px; 
+    margin: 0px 0 22px 0px;
+    font-size: 26px;
+    width: 100%;
+    color: red;
+    text-transform: uppercase;
+}
+
+a.list-group-item {
+    color: #ffffff !important;
+}
+.list-group-item {
+    background-color: #313b3d !important; 
+    border: 1px solid black;
+}
+.adminLeads{
+    background-color: cadetblue;
+    padding: 36px 0;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+}
+.revenueOverview{
+    border: 1px solid #ddd;
+    display: -webkit-box;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+.userPerformance{
+    border: 1px solid #eee;
+    display: flow-root;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+table, th , td {
+    //border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+.wrapper{
+    min-height: 960px;
+}
+form#empForm, form#editForm , form#courseForm, form#courseEdit{
+    padding: 0 35px 15px;
+}
+label.gender {
+    padding-top: 0 !important;
+}
+table tr th{
+    background: #f8f8f8;
+}
+.search-box {
+    padding-bottom: 0;
+}
+@media screen and (max-width: 368px){
+.wrapper{
+    min-width: 340px;
+}   
+}
